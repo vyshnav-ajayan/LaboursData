@@ -1,0 +1,6 @@
+module Pods_labourApp_labourAppTests {
+  umbrella header "Pods-labourApp-labourAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
