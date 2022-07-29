@@ -7,6 +7,7 @@ import {
   FlatList,
   TextInput,
   SafeAreaView,
+  Alert,
 } from 'react-native';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -18,7 +19,7 @@ import { LabourCard } from 'app/components/LabourCard';
 const Home: React.FC = () => {
   const [showDetails, setShowDetails] = useState(false);
   const [laboursList, setLaboursList] = useState([]);
-  const [searchText, setSearchText] = useState(false);
+  const [searchText, setSearchText] = useState('');
 
   const dispatch = useDispatch();
   const laboursData = useSelector(

@@ -4,12 +4,7 @@
 import createReducer from 'app/lib/createReducer';
 import * as types from 'app/store/actions/types';
 
-import { IGamesListState } from 'app/models/reducers/games';
-import {
-  IGamesListRequestState,
-  IGameListResponseState,
-} from 'app/models/actions/game';
-const initialState: IGamesListState = {
+const initialState: any = {
   laboursData: [],
   labourDetails: {},
   completeInitialFetch: false,
@@ -47,7 +42,7 @@ export const labourListReducer = createReducer(initialState, {
   [types.LABOUR_DETAILS_FAILED](state: any) {
     return {
       ...state,
-      labourDetails: { ...state.laboursData },
+      labourDetails: { ...state.labourDetails },
     };
   },
 });
